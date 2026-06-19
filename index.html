@@ -1,376 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishna Jaisi Sharma - ePortfolio</title>
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café Menu</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#home">Krishna Jaisi Sharma</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#conferences">Conferences</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <button class="btn btn-outline-light w-100" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </li>
-                </ul>
+    <!-- ============================================================
+    MENU CARD – MAIN CONTAINER
+    ============================================================ -->
+    <main class="menu-card" role="main" aria-label="Café menu">
+
+        <!-- ==========================================================
+             HEADER
+             ========================================================== -->
+        <header class="menu-header">
+            <h1>Menu</h1>
+            <p class="subtitle">Open from 8am to 9pm every day</p>
+        </header>
+
+        <!-- ==========================================================
+             SECTION 1 – Sandwiches and wraps
+             ========================================================== -->
+        <section class="menu-section" aria-labelledby="section-sandwiches">
+            <h2 id="section-sandwiches">Sandwiches and wraps</h2>
+            <hr class="menu-divider" />
+
+            <div class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-item-name">Ham and Cheese</div>
+                    <div class="menu-item-desc">Closed ham, cheddar cheese, wholemeal bread</div>
+                </div>
+                <span class="menu-item-price">£2.95</span>
             </div>
-        </div>
-    </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="hero-section d-flex align-items-center text-center">
-        <div class="container">
-            <h1 class="hero-title display-3 fw-bold text-white mb-3">Krishna Jaisi Sharma</h1>
-            <h2 class="hero-subtitle h3 text-light mb-4">BSc (Hons) Computer Systems Engineering</h2>
-            <p class="lead text-white-50 mb-5">University of Sunderland | ISMT College</p>
-            <a href="#portfolio" class="btn btn-custom btn-lg me-2 mb-2">View Portfolio</a>
-            <a href="#contact" class="btn btn-outline-light btn-lg mb-2">Get In Touch</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section py-5">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold mb-5">About Me</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="card about-card shadow-sm border-0">
-                        <div class="card-body text-center p-4 p-md-5">
-                            <i class="fas fa-user-graduate fa-3x text-primary mb-4"></i>
-                            <p class="lead mb-4">
-                                Hello! I'm <strong>Krishna Jaisi Sharma</strong>, a passionate Computer Systems Engineering student studying at ISMT College, affiliated with the University of Sunderland. I have a strong foundation in programming, networking, and creative media.
-                            </p>
-                            <p class="mb-4">
-                                Fluent in English and Nepali, I bring a diverse skill set ranging from cybersecurity and system administration to video editing and photography, ready to make a significant impact in the tech world.
-                            </p>
-                            <div class="d-flex justify-content-center gap-3">
-                                <span class="badge bg-primary px-3 py-2">English</span>
-                                <span class="badge bg-primary px-3 py-2">Nepali</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-item-name">Chicken Club</div>
+                    <div class="menu-item-desc">Grilled chicken, bacon, lettuce, tomato, mayo</div>
                 </div>
+                <span class="menu-item-price">£3.50</span>
             </div>
-        </div>
-    </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education-section py-5 bg-light">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold mb-5">Education</h2>
-            <div class="education-timeline row g-4">
-                <div class="col-md-4">
-                    <div class="card education-card h-100 shadow-sm border-0">
-                        <div class="card-body text-center p-4">
-                            <div class="mb-3"><i class="fas fa-school fa-2x text-secondary"></i></div>
-                            <h3 class="h5 card-title fw-bold">SEE</h3>
-                            <p class="text-primary fw-bold mb-2">2023</p>
-                            <p class="card-text text-muted">Successfully completed Secondary Education Examination.</p>
-                        </div>
-                    </div>
+            <div class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-item-name">Veggie Wrap</div>
+                    <div class="menu-item-desc">Hummus, roasted peppers, spinach, tortilla wrap</div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card education-card h-100 shadow-sm border-0">
-                        <div class="card-body text-center p-4">
-                            <div class="mb-3"><i class="fas fa-laptop-code fa-2x text-secondary"></i></div>
-                            <h3 class="h5 card-title fw-bold">+2 Computer Science</h3>
-                            <p class="text-primary fw-bold mb-2">2025</p>
-                            <p class="card-text text-muted">Achieved an A Grade.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card education-card h-100 shadow-sm border-0">
-                        <div class="card-body text-center p-4">
-                            <div class="mb-3"><i class="fas fa-university fa-2x text-secondary"></i></div>
-                            <h3 class="h5 card-title fw-bold">BSc (Hons) Computer Systems Engineering</h3>
-                            <p class="text-primary fw-bold mb-2">Current</p>
-                            <p class="card-text text-muted">ISMT College / University of Sunderland</p>
-                        </div>
-                    </div>
-                </div>
+                <span class="menu-item-price">£3.20</span>
             </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section py-5">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold mb-5">Skills & Expertise</h2>
-            <div class="row g-4">
-                <!-- Programming -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card skill-card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <h4 class="card-title text-center mb-4"><i class="fas fa-code me-2"></i>Programming</h4>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between"><label>C</label><span>85%</span></div>
-                                <div class="progress skill-progress"><div class="progress-bar" data-width="85%"></div></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between"><label>Python</label><span>90%</span></div>
-                                <div class="progress skill-progress"><div class="progress-bar" data-width="90%"></div></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between"><label>JavaScript</label><span>80%</span></div>
-                                <div class="progress skill-progress"><div class="progress-bar" data-width="80%"></div></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between"><label>C#</label><span>75%</span></div>
-                                <div class="progress skill-progress"><div class="progress-bar" data-width="75%"></div></div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-item-name">Tuna Melt</div>
+                    <div class="menu-item-desc">Tuna, melted mozzarella, sourdough bread</div>
                 </div>
-                <!-- Technical -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card skill-card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <h4 class="card-title text-center mb-4"><i class="fas fa-server me-2"></i>Technical</h4>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between"><label>Networking</label><span>85%</span></div>
-                                <div class="progress skill-progress"><div class="progress-bar" data-width="85%"></div></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between"><label>Cybersecurity</label><span>75%</span></div>
-                                <div class="progress skill-progress"><div class="progress-bar" data-width="75%"></div></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between"><label>Troubleshooting</label><span>90%</span></div>
-                                <div class="progress skill-progress"><div class="progress-bar" data-width="90%"></div></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between"><label>System Administration</label><span>80%</span></div>
-                                <div class="progress skill-progress"><div class="progress-bar" data-width="80%"></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Creative -->
-                <div class="col-lg-4 col-md-12">
-                    <div class="card skill-card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <h4 class="card-title text-center mb-4"><i class="fas fa-camera-retro me-2"></i>Creative</h4>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between"><label>Photography & Photo Editing</label><span>95%</span></div>
-                                <div class="progress skill-progress"><div class="progress-bar" data-width="95%"></div></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between"><label>Adobe Premiere Pro</label><span>85%</span></div>
-                                <div class="progress skill-progress"><div class="progress-bar" data-width="85%"></div></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between"><label>Final Cut Pro</label><span>80%</span></div>
-                                <div class="progress skill-progress"><div class="progress-bar" data-width="80%"></div></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between"><label>CapCut</label><span>95%</span></div>
-                                <div class="progress skill-progress"><div class="progress-bar" data-width="95%"></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <span class="menu-item-price">£3.75</span>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section py-5 bg-light">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold mb-5">Experience</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card experience-card mb-4 border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-map-marked-alt fa-2x text-primary me-3"></i>
-                                <div>
-                                    <h4 class="fw-bold mb-0">Government Door-to-Door Survey & Census Operations</h4>
-                                    <p class="text-muted mb-0">Field Representative / Data Collector</p>
-                                </div>
-                            </div>
-                            <ul class="mb-0">
-                                <li>Conducted extensive door-to-door surveys to gather critical demographic and census data.</li>
-                                <li>Ensured data accuracy and integrity while communicating effectively with diverse populations.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card experience-card border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-bullhorn fa-2x text-primary me-3"></i>
-                                <div>
-                                    <h4 class="fw-bold mb-0">Community Outreach & Public Awareness Campaigns</h4>
-                                    <p class="text-muted mb-0">Campaign Coordinator</p>
-                                </div>
-                            </div>
-                            <ul class="mb-0">
-                                <li>Organized and led public awareness campaigns to educate local communities on key issues.</li>
-                                <li>Designed, managed, and distributed informative materials tailored for various audiences.</li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- ==========================================================
+             SECTION 2 – Soups
+             ========================================================== -->
+        <section class="menu-section" aria-labelledby="section-soups">
+            <h2 id="section-soups">Soups</h2>
+            <hr class="menu-divider" />
+
+            <div class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-item-name">Tomato Basil</div>
+                    <div class="menu-item-desc">Roasted tomato, fresh basil, cream finish</div>
                 </div>
+                <span class="menu-item-price">£2.50</span>
             </div>
-        </div>
-    </section>
 
-    <!-- Awards Section -->
-    <section id="awards" class="award-section py-5">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold mb-5">Awards & Recognitions</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                    <div class="card award-card text-center border-0 shadow-sm p-5">
-                        <div class="card-body">
-                            <i class="fas fa-trophy fa-4x text-warning mb-4"></i>
-                            <h3 class="card-title fw-bold">Best Volunteer Award</h3>
-                            <div class="divider my-3 mx-auto" style="width: 50px; height: 3px; background-color: var(--primary-color);"></div>
-                            <p class="card-text mt-3 text-muted">Awarded for outstanding contribution, dedication, and leadership demonstrated during community outreach programs and public awareness campaigns.</p>
-                        </div>
-                    </div>
+            <div class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-item-name">Leek &amp; Potato</div>
+                    <div class="menu-item-desc">Slow-cooked leek, potato, chives</div>
                 </div>
+                <span class="menu-item-price">£2.50</span>
             </div>
-        </div>
-    </section>
 
-    <!-- Conferences Section -->
-    <section id="conferences" class="py-5 bg-light">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold mb-5">Conferences</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <i class="fas fa-users fa-3x text-secondary mb-4"></i>
-                    <p class="lead text-muted">
-                        Actively engaged in academic networking and seeking opportunities to attend, participate, and present at upcoming tech conferences and engineering symposiums globally.
-                    </p>
+            <div class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-item-name">Spicy Lentil</div>
+                    <div class="menu-item-desc">Red lentil, carrot, cumin, coriander</div>
                 </div>
+                <span class="menu-item-price">£2.80</span>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section py-5">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold mb-5">Portfolio Highlights</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card portfolio-card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-5">
-                            <i class="fas fa-laptop-code fa-3x mb-4 text-primary"></i>
-                            <h4 class="fw-bold">Software Engineering</h4>
-                            <p class="text-muted">A collection of robust applications built using C, Python, C#, and modern web technologies.</p>
-                        </div>
-                    </div>
+        <!-- ==========================================================
+             SECTION 3 – Drinks
+             ========================================================== -->
+        <section class="menu-section" aria-labelledby="section-drinks">
+            <h2 id="section-drinks">Drinks</h2>
+            <hr class="menu-divider" />
+
+            <div class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-item-name">Cappuccino</div>
+                    <div class="menu-item-desc">Espresso, steamed milk, foam, chocolate dust</div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card portfolio-card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-5">
-                            <i class="fas fa-film fa-3x mb-4 text-primary"></i>
-                            <h4 class="fw-bold">Creative Media</h4>
-                            <p class="text-muted">High-quality video editing, color grading, and photography projects produced via Premiere Pro and Final Cut Pro.</p>
-                        </div>
-                    </div>
-                </div>
+                <span class="menu-item-price">£2.20</span>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section py-5 bg-light">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold mb-5">Contact Me</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card border-0 shadow-sm p-4 p-md-5">
-                        <form class="contact-form" onsubmit="return validateContactForm(event)">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="name" class="form-label fw-semibold">Full Name</label>
-                                    <input type="text" class="form-control form-control-lg" id="name" placeholder="John Doe" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="email" class="form-label fw-semibold">Email Address</label>
-                                    <input type="email" class="form-control form-control-lg" id="email" placeholder="john@example.com" required>
-                                </div>
-                                <div class="col-12 mt-4">
-                                    <label for="message" class="form-label fw-semibold">Message</label>
-                                    <textarea class="form-control form-control-lg" id="message" rows="5" placeholder="How can I help you?" required></textarea>
-                                </div>
-                                <div class="col-12 text-center mt-4">
-                                    <button type="submit" class="btn btn-custom btn-lg px-5">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+            <div class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-item-name">Flat White</div>
+                    <div class="menu-item-desc">Double espresso, velvety milk</div>
                 </div>
+                <span class="menu-item-price">£2.40</span>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer-section text-white text-center py-4">
-        <div class="container">
-            <div class="mb-3">
-                <a href="#" class="text-white text-decoration-none me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-                <a href="#" class="text-white text-decoration-none me-3"><i class="fab fa-github fa-lg"></i></a>
-                <a href="#" class="text-white text-decoration-none"><i class="fas fa-envelope fa-lg"></i></a>
+            <div class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-item-name">Fresh Orange Juice</div>
+                    <div class="menu-item-desc">Squeezed to order, no added sugar</div>
+                </div>
+                <span class="menu-item-price">£2.60</span>
             </div>
-            <p class="mb-0">&copy; <span id="current-year"></span> Krishna Jaisi Sharma. All Rights Reserved.</p>
-        </div>
-    </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" class="btn btn-primary rounded-circle shadow" onclick="scrollToTop()" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Welcome Modal -->
-    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0 bg-primary text-white">
-                    <h5 class="modal-title"><i class="fas fa-hand-sparkles me-2"></i>Welcome!</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-item-name">Herbal Tea</div>
+                    <div class="menu-item-desc">Peppermint, camomile, or ginger &amp; lemon</div>
                 </div>
-                <div class="modal-body p-4 text-center">
-                    <h4 class="mb-3">Hello there!</h4>
-                    <p class="mb-0">Welcome to the professional ePortfolio of <strong>Krishna Jaisi Sharma</strong>. Feel free to explore my skills, experiences, and projects.</p>
-                </div>
-                <div class="modal-footer border-0 justify-content-center">
-                    <button type="button" class="btn btn-primary px-4" data-bs-dismiss="modal">Explore Portfolio</button>
-                </div>
+                <span class="menu-item-price">£1.80</span>
             </div>
-        </div>
-    </div>
 
-    <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+            <div class="menu-item">
+                <div class="menu-item-left">
+                    <div class="menu-item-name">Mango Smoothie</div>
+                    <div class="menu-item-desc">Mango, yogurt, honey, hint of lime</div>
+                </div>
+                <span class="menu-item-price">£3.10</span>
+            </div>
+        </section>
+
+        <!-- ==========================================================
+             FOOTER
+             ========================================================== -->
+        <footer class="menu-footer">
+            <p>
+                All purchases include VAT and a 10% donation to Water Aid
+            </p>
+            <div class="social-icons">
+                <!-- Facebook -->
+                <a href="#" aria-label="Facebook" title="Facebook">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <!-- Instagram -->
+                <a href="#" aria-label="Instagram" title="Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <!-- Twitter -->
+                <a href="#" aria-label="Twitter" title="Twitter">
+                    <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+        </footer>
+
+    </main>
+
 </body>
 </html>
