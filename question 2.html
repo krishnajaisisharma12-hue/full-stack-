@@ -1,0 +1,1054 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Paris, France - The City of Light. Explore famous attractions, activities, and plan your perfect Parisian getaway.">
+    <meta name="keywords" content="Paris, France, travel, tourism, Eiffel Tower, attractions">
+    <meta name="author" content="Paris Travel Guide">
+    <title>Paris, France - Your Ultimate Travel Guide | City of Light</title>
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary-color: #003399;
+            --secondary-color: #e4002b;
+            --accent-color: #ffd700;
+            --text-dark: #2c3e50;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        /* ===== GLOBAL STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* ===== NAVIGATION BAR ===== */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), #0055cc);
+            box-shadow: var(--shadow);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light) !important;
+        }
+
+        .navbar-brand i {
+            color: var(--accent-color);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-light) !important;
+            margin: 0 10px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--accent-color) !important;
+            transform: translateY(-2px);
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: var(--accent-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 80%;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            background: linear-gradient(rgba(0, 51, 153, 0.7), rgba(228, 0, 43, 0.6)),
+                        url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1920') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-section h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-btn {
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            background: #ffed4e;
+            color: var(--text-dark);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-section {
+            background: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 4px;
+            background: var(--secondary-color);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .about-content:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .paris-logo {
+            max-width: 250px;
+            margin: 30px auto;
+            display: block;
+            filter: drop-shadow(var(--shadow));
+        }
+
+        /* ===== ATTRACTIONS SECTION ===== */
+        .attractions-section {
+            background: white;
+        }
+
+        .attractions-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .attractions-list li {
+            background: var(--bg-light);
+            margin: 15px 0;
+            padding: 20px;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .attractions-list li:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-hover);
+            background: #fff;
+        }
+
+        .attractions-list li i {
+            color: var(--primary-color);
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+
+        .attractions-list li strong {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        /* ===== ACTIVITIES SECTION ===== */
+        .activities-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .activities-list {
+            counter-reset: activity-counter;
+            list-style: none;
+            padding: 0;
+        }
+
+        .activities-list li {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            padding-left: 80px;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .activities-list li:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .activities-list li::before {
+            counter-increment: activity-counter;
+            content: counter(activity-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: var(--shadow);
+        }
+
+        .activities-list li strong {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* ===== GALLERY SECTION ===== */
+        .gallery-section {
+            background: white;
+        }
+
+        .gallery-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .gallery-card img {
+            height: 300px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-card .card-body {
+            padding: 20px;
+        }
+
+        .gallery-card .card-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        /* ===== VIDEO SECTION ===== */
+        .video-section {
+            background: var(--bg-light);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ===== LINKS SECTION ===== */
+        .links-section {
+            background: white;
+        }
+
+        .link-card {
+            background: linear-gradient(135deg, var(--primary-color), #0055cc);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            height: 100%;
+            text-decoration: none;
+            display: block;
+        }
+
+        .link-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            background: linear-gradient(135deg, #0055cc, var(--secondary-color));
+            color: white;
+        }
+
+        .link-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .link-card h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        /* ===== INTERACTIVE SECTION ===== */
+        .interactive-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .interactive-section .section-title h2,
+        .interactive-section .section-title h3 {
+            color: white;
+        }
+
+        .interactive-section .section-title h2::after {
+            background: var(--accent-color);
+        }
+
+        .interactive-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .interactive-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .interactive-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .btn-interactive {
+            background: var(--accent-color);
+            color: var(--text-dark);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            margin-top: 15px;
+        }
+
+        .btn-interactive:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+            background: #ffed4e;
+        }
+
+        #travelTip {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        #currentDateTime {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 20px;
+            color: var(--accent-color);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.8rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        /* ===== SCROLL TO TOP BUTTON ===== */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+            box-shadow: var(--shadow-hover);
+            transition: all 0.3s ease;
+        }
+
+        #scrollTopBtn:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1.2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            .navbar-brand {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION BAR ===== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#home">
+                    <i class="fas fa-landmark"></i> Paris Travel
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about"><i class="fas fa-info-circle"></i> About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#attractions"><i class="fas fa-camera"></i> Attractions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#activities"><i class="fas fa-list"></i> Activities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery"><i class="fas fa-images"></i> Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#video"><i class="fas fa-video"></i> Video</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#interactive"><i class="fas fa-gamepad"></i> Interactive</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        
+        <!-- ===== HERO SECTION ===== -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1><i class="fas fa-crown"></i> Paris, France <i class="fas fa-crown"></i></h1>
+                <p>✨ The City of Light Awaits You ✨</p>
+                <a href="#about" class="hero-btn">Explore Paris <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT PARIS SECTION ===== -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2><i class="fas fa-globe-europe"></i> Discover Paris</h2>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mx-auto">
+                        <article class="about-content">
+                            <!-- Paris Logo -->
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Logo_Paris.svg/320px-Logo_Paris.svg.png" 
+                                 alt="Official Paris Logo" 
+                                 class="paris-logo">
+                            
+                            <!-- First Informative Paragraph -->
+                            <p>
+                                <i class="fas fa-quote-left" style="color: var(--secondary-color);"></i>
+                                Paris, the magnificent capital of France, stands as one of the world's most enchanting and culturally rich cities. Known affectionately as "La Ville Lumière" (The City of Light), Paris has captivated the hearts and imaginations of millions of visitors for centuries. This extraordinary metropolis seamlessly blends historic grandeur with contemporary sophistication, offering an unparalleled experience that encompasses art, architecture, fashion, gastronomy, and romance. The city's iconic skyline, dominated by the majestic Eiffel Tower, stretches along the graceful curves of the Seine River, creating breathtaking vistas at every turn. From the elegant Haussmannian boulevards to the charming cobblestone streets of Montmartre, Paris presents a visual feast that has inspired countless artists, writers, and dreamers throughout history.
+                                <i class="fas fa-quote-right" style="color: var(--secondary-color);"></i>
+                            </p>
+                            
+                            <!-- Second Informative Paragraph -->
+                            <p>
+                                <i class="fas fa-quote-left" style="color: var(--secondary-color);"></i>
+                                With a population exceeding 2 million within the city limits and over 12 million in the greater metropolitan area, Paris serves as France's political, economic, and cultural heartbeat. The city's influence extends far beyond its borders, setting global trends in fashion, cuisine, and the arts. Paris boasts an extraordinary concentration of world-class museums, including the legendary Louvre, home to the enigmatic Mona Lisa and over 35,000 works of art. The city's café culture invites visitors to slow down and savor life's pleasures, whether enjoying a perfectly flaky croissant at a sidewalk bistro, sipping espresso while people-watching, or indulging in haute cuisine at a Michelin-starred restaurant. The meticulously manicured gardens, such as the Jardin du Luxembourg and Tuileries, provide peaceful oases amidst the urban energy. Whether you're exploring Gothic cathedrals, browsing vintage bookstalls along the Seine, or ascending the Eiffel Tower for panoramic views, Paris delivers unforgettable moments that justify its reputation as one of the world's greatest cities.
+                                <i class="fas fa-quote-right" style="color: var(--secondary-color);"></i>
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TOP ATTRACTIONS SECTION ===== -->
+        <section id="attractions" class="attractions-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2><i class="fas fa-star"></i> Famous Attractions</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- Unordered List of 5 Famous Attractions -->
+                        <ul class="attractions-list">
+                            <li>
+                                <i class="fas fa-tower-observation"></i>
+                                <strong>Eiffel Tower</strong> - The iconic symbol of Paris and one of the most recognizable structures in the world. Standing 324 meters tall, this iron lattice masterpiece offers breathtaking panoramic views of the entire city from its observation decks. Built by Gustave Eiffel in 1889, it attracts nearly 7 million visitors annually.
+                            </li>
+                            <li>
+                                <i class="fas fa-palette"></i>
+                                <strong>Louvre Museum</strong> - The world's largest and most visited art museum, housing over 380,000 objects and displaying 35,000 works of art. Home to Leonardo da Vinci's Mona Lisa, the Venus de Milo, and countless other priceless treasures spanning from ancient civilizations to the 19th century.
+                            </li>
+                            <li>
+                                <i class="fas fa-church"></i>
+                                <strong>Notre-Dame Cathedral</strong> - A masterpiece of French Gothic architecture dating back to the 12th century. Though damaged by fire in 2019, this magnificent cathedral remains an enduring symbol of Paris, featuring stunning rose windows, flying buttresses, and intricate stone carvings.
+                            </li>
+                            <li>
+                                <i class="fas fa-monument"></i>
+                                <strong>Arc de Triomphe</strong> - The monumental arch standing at the center of Place Charles de Gaulle, honoring those who fought and died for France. Commissioned by Napoleon in 1806, it offers spectacular views down the Champs-Élysées and features the Tomb of the Unknown Soldier beneath its vault.
+                            </li>
+                            <li>
+                                <i class="fas fa-place-of-worship"></i>
+                                <strong>Sacré-Cœur Basilica</strong> - The stunning white-domed basilica perched atop Montmartre hill, the highest point in Paris. This Romano-Byzantine architectural gem offers spectacular panoramic views of the city and features beautiful mosaics and one of the world's largest pipe organs.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== THINGS TO DO SECTION ===== -->
+        <section id="activities" class="activities-section">
+            <div class="container">
+                <div class="section-title">
+                    <h3><i class="fas fa-clipboard-list"></i> Top 5 Activities for Tourists</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <!-- Ordered List of 5 Activities -->
+                        <ol class="activities-list">
+                            <li>
+                                <strong>Take a Seine River Cruise</strong> 🚢 - Experience the magic of Paris from the water with a relaxing boat tour along the Seine River. Glide past illuminated landmarks including the Eiffel Tower, Notre-Dame, and the Louvre while enjoying commentary about the city's rich history. Evening cruises offer a particularly romantic experience with dinner options and sparkling city lights.
+                            </li>
+                            <li>
+                                <strong>Explore the Louvre Museum</strong> 🎨 - Dedicate several hours to exploring one of the world's greatest art collections. Don't miss the Mona Lisa, Winged Victory of Samothrace, and the Crown Jewels. Consider booking a guided tour to maximize your experience and learn fascinating stories behind the masterpieces.
+                            </li>
+                            <li>
+                                <strong>Ascend the Eiffel Tower</strong> 🗼 - No trip to Paris is complete without visiting this iconic monument. Choose between taking the elevator or climbing the stairs to various levels for increasingly spectacular views. Visit at sunset to watch the city transform from day to night, then stay for the hourly light show.
+                            </li>
+                            <li>
+                                <strong>Wander Through Montmartre</strong> 🎭 - Explore this charming bohemian neighborhood that was once home to artists like Picasso and Van Gogh. Visit the Sacré-Cœur Basilica, watch street artists at Place du Tertre, discover hidden vineyards, and enjoy authentic French atmosphere in cozy cafés and bistros.
+                            </li>
+                            <li>
+                                <strong>Indulge in French Gastronomy</strong> 🥐 - Immerse yourself in Paris's legendary food culture. Start with breakfast at a traditional boulangerie for fresh croissants and pain au chocolat, enjoy leisurely lunches at charming bistros, sample artisanal cheeses and wines, and treat yourself to dinner at a Michelin-starred restaurant for an unforgettable culinary experience.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PHOTO GALLERY SECTION ===== -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2><i class="fas fa-camera-retro"></i> Photo Gallery</h2>
+                </div>
+                <div class="row g-4">
+                    <!-- Photo 1: Eiffel Tower -->
+                    <div class="col-md-6">
+                        <div class="card gallery-card">
+                            <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&q=80" 
+                                 class="card-img-top" 
+                                 alt="Eiffel Tower at sunset with dramatic sky in Paris, France">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-tower-observation"></i> Iconic Eiffel Tower</h5>
+                                <p class="card-text">The magnificent Eiffel Tower illuminated at sunset, showcasing why Paris is called the City of Light. This iron lattice masterpiece has captivated visitors for over 130 years.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photo 2: Parisian Street -->
+                    <div class="col-md-6">
+                        <div class="card gallery-card">
+                            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80" 
+                                 class="card-img-top" 
+                                 alt="Charming Parisian street with traditional Haussmannian architecture">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-building"></i> Classic Parisian Streets</h5>
+                                <p class="card-text">Experience the timeless elegance of traditional Parisian architecture along tree-lined boulevards. These iconic Haussmannian buildings define the city's distinctive character.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== VIDEO SECTION ===== -->
+        <section id="video" class="video-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2><i class="fas fa-play-circle"></i> Experience Paris in Video</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="video-container">
+                            <!-- YouTube Video Embed -->
+                            <iframe 
+                                src="https://www.youtube.com/embed/AQ6GmpMu5L8" 
+                                title="Paris France Travel Guide - Beautiful City Tour 4K" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="text-center mt-4" style="font-size: 1.1rem;">
+                            <i class="fas fa-video"></i> Take a virtual tour of Paris and discover its beauty, culture, and charm! 🎬
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== USEFUL LINKS SECTION ===== -->
+        <section id="links" class="links-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2><i class="fas fa-link"></i> Useful Travel Resources</h2>
+                </div>
+                <div class="row g-4">
+                    <!-- Link 1: Official Paris Tourism -->
+                    <div class="col-md-6">
+                        <a href="https://en.parisinfo.com/" target="_blank" rel="noopener noreferrer" class="link-card">
+                            <i class="fas fa-info-circle"></i>
+                            <h3>Paris Tourist Office</h3>
+                            <p>Official Paris Convention and Visitors Bureau - Your comprehensive guide to attractions, events, accommodations, dining, and practical travel information for planning the perfect Paris trip.</p>
+                            <span class="btn btn-light mt-3">Visit Website <i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                    </div>
+                    
+                    <!-- Link 2: Paris Transportation -->
+                    <div class="col-md-6">
+                        <a href="https://www.ratp.fr/en" target="_blank" rel="noopener noreferrer" class="link-card">
+                            <i class="fas fa-subway"></i>
+                            <h3>RATP - Paris Transport</h3>
+                            <p>Official website for Paris public transportation including metro, bus, RER, and tram. Find maps, schedules, ticket information, and real-time updates to navigate the city efficiently.</p>
+                            <span class="btn btn-light mt-3">Visit Website <i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== INTERACTIVE JAVASCRIPT SECTION ===== -->
+        <section id="interactive" class="interactive-section">
+            <div class="container">
+                <div class="section-title">
+                    <h3><i class="fas fa-magic"></i> Interactive Features</h3>
+                </div>
+                <div class="row g-4">
+                    <!-- Travel Tips Feature -->
+                    <div class="col-md-4">
+                        <div class="interactive-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Random Travel Tip</h4>
+                            <p>Click the button below to get a random travel tip for your Paris adventure!</p>
+                            <button class="btn btn-interactive" onclick="showRandomTip()">
+                                <i class="fas fa-random"></i> Get Travel Tip
+                            </button>
+                            <div id="travelTip">Click the button to see a tip! 💡</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Background Color Changer -->
+                    <div class="col-md-4">
+                        <div class="interactive-card">
+                            <i class="fas fa-palette"></i>
+                            <h4>Change Theme Color</h4>
+                            <p>Customize your experience by changing the page background color!</p>
+                            <button class="btn btn-interactive" onclick="changeBackgroundColor()">
+                                <i class="fas fa-paint-brush"></i> Change Color
+                            </button>
+                            <p class="mt-3" style="font-size: 0.9rem;">Current theme will be updated!</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Date and Time Display -->
+                    <div class="col-md-4">
+                        <div class="interactive-card">
+                            <i class="fas fa-clock"></i>
+                            <h4>Current Date & Time</h4>
+                            <p>See the current date and time for your travel planning!</p>
+                            <div id="currentDateTime"></div>
+                            <p class="mt-3" style="font-size: 0.9rem;">
+                                <i class="fas fa-info-circle"></i> Updated in real-time
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h4><i class="fas fa-landmark"></i> Paris Travel Guide</h4>
+                <p>Your ultimate resource for discovering the magic of Paris, France 🇫🇷</p>
+                
+                <!-- Social Media Links -->
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                </div>
+                
+                <p class="mt-4">
+                    <i class="fas fa-heart" style="color: var(--secondary-color);"></i> 
+                    Made with passion for Paris travelers
+                </p>
+                <p>&copy; 2024 Paris Travel Guide. All rights reserved. | 
+                    <i class="fas fa-map-marked-alt"></i> Explore Responsibly
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TO TOP BUTTON ===== -->
+    <button id="scrollTopBtn" onclick="scrollToTop()" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== BOOTSTRAP 5 JS CDN ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ===== CUSTOM JAVASCRIPT ===== -->
+    <script>
+        // ===== WELCOME ALERT ON PAGE LOAD =====
+        window.addEventListener('load', function() {
+            alert('🇫🇷 Welcome to Paris Travel Guide! 🗼\n\nDiscover the magic of the City of Light! ✨');
+        });
+
+        // ===== RANDOM TRAVEL TIP FUNCTION =====
+        function showRandomTip() {
+            // Array of travel tips about Paris
+            const tips = [
+                "💡 Best time to visit: Spring (April-June) and Fall (September-November) offer pleasant weather and fewer crowds!",
+                "🎫 Buy a Paris Museum Pass to save money and skip lines at major attractions!",
+                "🚇 The Paris Metro is the fastest way to get around - buy a carnet (book of 10 tickets) for savings!",
+                "🥐 Visit local boulangeries early in the morning for the freshest croissants and pastries!",
+                "📸 For the best Eiffel Tower photos, head to Trocadéro Gardens at sunrise or sunset!",
+                "💰 Many museums offer free admission on the first Sunday of each month!",
+                "🍷 Try a wine tasting tour in the Marais district for an authentic Parisian experience!",
+                "🎨 Book Louvre tickets online in advance to avoid long queues at the entrance!",
+                "🌙 The Eiffel Tower sparkles every hour on the hour after sunset - don't miss it!",
+                "🚶 Explore Paris on foot - the best discoveries are often found by wandering the charming streets!"
+            ];
+            
+            // Select a random tip
+            const randomTip = tips[Math.floor(Math.random() * tips.length)];
+            
+            // Display the tip with animation
+            const tipElement = document.getElementById('travelTip');
+            tipElement.style.opacity = '0';
+            
+            setTimeout(() => {
+                tipElement.innerHTML = randomTip;
+                tipElement.style.opacity = '1';
+                tipElement.style.transition = 'opacity 0.5s ease';
+            }, 200);
+        }
+
+        // ===== CHANGE BACKGROUND COLOR FUNCTION =====
+        function changeBackgroundColor() {
+            // Array of elegant color schemes
+            const colors = [
+                '#f8f9fa',
+                '#e3f2fd',
+                '#fff3e0',
+                '#fce4ec',
+                '#f3e5f5',
+                '#e8f5e9',
+                '#fff9c4',
+                '#ffe0b2'
+            ];
+            
+            // Select a random color
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            // Apply the color to body with smooth transition
+            document.body.style.transition = 'background-color 0.8s ease';
+            document.body.style.backgroundColor = randomColor;
+            
+            // Alert the user
+            alert('✨ Theme color changed! The page background has been updated.');
+        }
+
+        // ===== DISPLAY CURRENT DATE AND TIME =====
+        function updateDateTime() {
+            const now = new Date();
+            
+            // Format options
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            
+            // Format the date and time
+            const formattedDateTime = now.toLocaleDateString('en-US', options);
+            
+            // Display in the element
+            document.getElementById('currentDateTime').innerHTML = 
+                '<i class="fas fa-calendar-alt"></i> ' + formattedDateTime;
+        }
+
+        // Update date/time immediately and then every second
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        // ===== SMOOTH SCROLL TO SECTIONS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ===== SCROLL TO TOP BUTTON FUNCTIONALITY =====
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // ===== NAVBAR BACKGROUND ON SCROLL =====
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'linear-gradient(135deg, rgba(0, 51, 153, 0.95), rgba(0, 85, 204, 0.95))';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = 'linear-gradient(135deg, var(--primary-color), #0055cc)';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+
+        // ===== ANIMATE ELEMENTS ON SCROLL =====
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.gallery-card, .interactive-card, .about-content').forEach(el => {
+            observer.observe(el);
+        });
+
+    </script>
+
+</body>
+</html>
+```
