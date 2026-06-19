@@ -1,0 +1,228 @@
+/* style.css
+  Professional ePortfolio Styles for Krishna Jaisi Sharma
+*/
+
+/* Global Styles & Variables */
+:root {
+    --primary-color: #003366;
+    --secondary-color: #00509e;
+    --accent-color: #ff9900;
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --bg-light: #f4f7f6;
+    --card-bg: #ffffff;
+    --transition-speed: 0.3s;
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --primary-color: #1e90ff;
+    --secondary-color: #4da6ff;
+    --text-color: #e0e0e0;
+    --bg-color: #121212;
+    --bg-light: #1e1e1e;
+    --card-bg: #2a2a2a;
+}
+
+/* Base Body Styles */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    scroll-behavior: smooth;
+    padding-top: 70px; /* Offset for fixed navbar */
+}
+
+.bg-light {
+    background-color: var(--bg-light) !important;
+    transition: background-color var(--transition-speed);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* Navbar (.navbar-custom) */
+.navbar-custom {
+    background-color: #003366; 
+    padding: 1rem 0;
+    transition: background-color var(--transition-speed);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .navbar-custom {
+    background-color: #0a0a0a;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Hero Section (.hero-section) */
+.hero-section {
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.9), rgba(0, 80, 158, 0.9)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+    height: calc(100vh - 70px);
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9), rgba(30, 144, 255, 0.5)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+}
+
+.hero-title {
+    animation: fadeInDown 1s ease;
+}
+
+.hero-subtitle {
+    animation: fadeInUp 1s ease 0.5s both;
+}
+
+/* Reusable Card Styles */
+.about-card, .education-card, .skill-card, .experience-card, .award-card, .portfolio-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
+    border-radius: 12px;
+}
+
+.about-card:hover, .education-card:hover, .skill-card:hover, .experience-card:hover, .award-card:hover, .portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+body.dark-mode .about-card:hover, body.dark-mode .education-card:hover, 
+body.dark-mode .skill-card:hover, body.dark-mode .experience-card:hover, 
+body.dark-mode .award-card:hover, body.dark-mode .portfolio-card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4) !important;
+}
+
+/* Skills Section (.skills-section) */
+.skills-section label {
+    font-weight: 500;
+}
+
+.skill-progress {
+    height: 12px;
+    background-color: #e9ecef;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .skill-progress {
+    background-color: #444;
+}
+
+.skill-progress .progress-bar {
+    background-color: var(--primary-color);
+    width: 0; /* JS handles the animation */
+    transition: width 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Custom Buttons (.btn-custom) */
+.btn-custom {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color var(--transition-speed), transform 0.2s;
+}
+
+.btn-custom:hover {
+    background-color: #e68a00;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 153, 0, 0.3);
+}
+
+/* Contact Form (.contact-form) */
+.contact-form input, .contact-form textarea {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 51, 102, 0.25);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.dark-mode .contact-form input, body.dark-mode .contact-form textarea {
+    border: 1px solid #555;
+}
+body.dark-mode .contact-form input:focus, body.dark-mode .contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(30, 144, 255, 0.25);
+}
+
+/* Footer (.footer-section) */
+.footer-section {
+    background-color: #001f3f !important;
+}
+body.dark-mode .footer-section {
+    background-color: #050505 !important;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; 
+    z-index: 99;
+    background-color: var(--primary-color);
+    border: none;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+    body {
+        padding-top: 60px;
+    }
+}
